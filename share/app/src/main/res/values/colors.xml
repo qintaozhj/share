@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+    <!--UI规范通用颜色值  -->
+    <color name="yc_white">#ffffff</color>
+    <color name="yc_black">#333333</color>
+    <color name="yc_background_grey">#f0f0f0</color>
+    <color name="yc_theme_grey">#161823</color>
+    <color name="yc_blue">#4ca3ff</color>
+    <color name="yc_green">#19e5b4</color>
+    <color name="yc_warning_red">#f12644</color>
+    <color name="yc_red">#f45169</color>
+    <color name="yc_red_selected">#7bf45169</color>
+    <color name="yc_orange">#ffa200</color>
+    <color name="yc_yellow">#ffcc99</color>
+    <!--标题栏背景色-->
+    <color name="yc_main">#ffa100</color>
+    <color name="yc_main_select">@color/yc_50b</color>
+    <!-- 6白色透明度色值 100%  95%  70%   50%  30%  15%-->
+    <color name="yc_white_70">#b2ffffff</color>
+    <color name="yc_white_50">#7fffffff</color>
+    <color name="yc_white_30">#4cffffff</color>
+    <color name="yc_white_15">#26ffffff</color>
+    <color name="yc_white_10">#19ffffff</color>
+    <!-- 6黑色透明度色值 100%  95%  70%   50%  30%  15%-->
+    <color name="yc_black_90">#E6000000</color>
+    <color name="yc_black_75">#BF000000</color>
+    <color name="yc_black_70">#b2000000</color>
+    <color name="yc_black_60">#99000000</color>
+    <color name="yc_black_50">#7f000000</color>
+    <color name="yc_black_30">#4c000000</color>
+    <color name="yc_black_20">#33000000</color>
+    <color name="yc_black_15">#26000000</color>
+    <color name="yc_black_10">#19000000</color>
+    <!-- 10% 透明蓝色-->
+    <color name="yc_80b">#333333</color>
+    <color name="yc_50b">#808080</color>
+    <color name="yc_20b">#cccccc</color>
+    <color name="yc_10b">#e6e6e6</color>
+    <color name="yc_0b">#f2f2f2</color>
+    <!-- 基础色  -->
+    <color name="red">#ff5a58</color>
+    <color name="red_e6">#E6ff5a58</color>
+    <color name="noticered">#f43530</color>
+    <color name="orange">#ffa200</color>
+    <color name="lightorange">#ffb800</color>
+    <color name="deepblue">#465a85</color>
+    <color name="blue">#1874CD</color>
+    <color name="blue_10">#1C86EE</color>
+    <color name="color_4876FF">#4876FF</color>
+    <color name="color_1E90FF">#1E90FF</color>
+    <color name="color_40c1fc">#40c1fc</color>
+    <color name="color_87CEFA">#87CEFA</color>
+    <color name="color_747ae8">#747ae8</color>
+    <color name="color_96a6f3">#96a6f3</color>
+    <color name="color_f88484">#f88484</color>
+    <color name="color_FF6A6A">#FF6A6A</color>
+    <color name="color_ef9a19">#ef9a19</color>
+    <color name="color_ffbe26">#ffbe26</color>
+    <color name="greenbutton">#27c8b4</color>
+    <color name="black">#000000</color>
+    <color name="deepgray">#6e6e6e</color>
+    <color name="gray">#737373</color>
+    <color name="lightgray">#a8a8a8</color>
+    <color name="spaceline">#c8c8c8</color>
+    <color name="palegray">#cacaca</color>
+    <color name="lightspaceline">#e7e7e7</color>
+    <color name="circlegray">#f4f4f4</color>
+    <!--APP背景色-->
+    <color name="tabbarbackground">#f2f2f2</color>
+    <!-- 拓展——黑色背景  -->
+    <color name="deepgreenbutton">#58c05f</color>
+    <color name="blacktitletabbar">#191919</color>
+    <!-- 透明颜色   -->
+    <!-- 1A   10%   C0  75%    80  50%   40   25% -->
+    <color name="deepGreen">#32b833</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <!--APP背景色-->
+    <color name="app_color_bg">@color/tabbarbackground</color>
+    <!--标题栏背景色-->
+    <color name="app_title_bg">@color/yc_main</color>
+    <color name="light_green">#6acf98</color>
+    <!--标签圆颜色值-->
+    <color name="fast_words_bg">#d8d8d8</color>
+    <!--弹幕文字颜色-->
+    <color name="grey_9b">#9b9b9b</color>
+    <!--弹幕-->
+    <color name="danmu_bg_color">#ffffff</color>
+    <color name="danmu_content_color">#333333</color>
+    <color name="color_f9e7c7">#f9e7c7</color>
+
+</resources>

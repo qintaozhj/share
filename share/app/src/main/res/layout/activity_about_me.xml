@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.qin.tao.share.widget.title.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_large"
+        android:text="@string/app_name"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/font_normal"
+        android:textStyle="bold" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:text=""
+        android:textColor="@color/orange"
+        android:textSize="@dimen/font_min" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textSize="@dimen/font_normal"
+        android:text="有趣的生活，从这里开始"
+        android:textColor="@color/blue" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="\u3000\u3000这是一款致力于人们在休闲业余时间，自娱乃至分享快乐的一款APP，里面有众多的笑话、趣图乃至GIF动态图片，在工作闲暇之余，打开app，放松一下，美美的生活，就是这么的happy！\n\u3000\u3000您有任何疑问和问题，请发送邮箱至：772855005@qq.com，我会第一时间观看的哦!"
+        android:textColor="@color/yc_blue" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="4dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="后期将会有更多的内容开放哦，敬请期待!"
+        android:textColor="@color/yc_blue" />
+
+</LinearLayout>

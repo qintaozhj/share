@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tabbarbackground"
+    android:orientation="vertical">
+
+    <com.qin.tao.share.widget.title.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_min"
+        android:paddingRight="@dimen/margin_min">
+
+        <com.qin.tao.share.app.base.BaseTextView
+            android:id="@+id/select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/yc_blue"
+            android:textSize="@dimen/font_normal"
+            tools:text="打赏" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_min"
+        android:paddingRight="@dimen/margin_min">
+
+        <com.qin.tao.share.app.base.BaseTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_select_pay"
+            android:textColor="@color/yc_50b"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <View style="@style/SpaceLine" />
+
+    <LinearLayout
+        android:id="@+id/alipay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_large">
+
+        <ImageView
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_large"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pay_treasure" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:duplicateParentState="true">
+
+            <com.qin.tao.share.app.base.BaseTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="@string/alipay_rapid"
+                android:textColor="@color/yc_black"
+                android:textSize="@dimen/font_large" />
+
+            <View
+                android:id="@+id/small_line"
+                style="@style/SpaceLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alipay_scan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_large">
+
+        <ImageView
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_large"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pay_treasure" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:duplicateParentState="true">
+
+            <com.qin.tao.share.app.base.BaseTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="@string/alipay_scan"
+                android:textColor="@color/yc_black"
+                android:textSize="@dimen/font_large" />
+
+            <View
+                android:id="@+id/small_sline"
+                style="@style/SpaceLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wechat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_large">
+
+        <ImageView
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_large"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/wechat_pay" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:duplicateParentState="true">
+
+            <com.qin.tao.share.app.base.BaseTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="@string/wechat"
+                android:textColor="@color/yc_black"
+                android:textSize="@dimen/font_large" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/large_line"
+        style="@style/SpaceLine"
+        android:visibility="visible" />
+
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/pay_money_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:padding="15dp"
+        android:text="您的支持是对我最大的信任\n您的支持是对我最大的鼓励\n您的支持是我前进的动力\n后期将会不定时更新更多有用的东西给你们\n只为让你们高兴\n我最最亲爱的朋友,我爱你们"
+        android:textColor="@color/yc_red"
+        android:textSize="@dimen/font_normal" />
+</LinearLayout>

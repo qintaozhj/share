@@ -1,0 +1,64 @@
+<resources>
+    <!-- 通用字体大小 -->
+    <dimen name="font_max">36sp</dimen>
+    <dimen name="font_huge">27sp</dimen>
+    <dimen name="font_larger">24sp</dimen>
+    <dimen name="font_medium">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_min">12sp</dimen>
+    <dimen name="font_tiny">11sp</dimen>
+    <dimen name="font_minimum">10sp</dimen>
+    <dimen name="font_32px">16sp</dimen>
+
+    <!-- 通用 外边距（margin） -->
+    <dimen name="margin_max">55dp</dimen>
+    <dimen name="margin_huge">45dp</dimen>
+    <dimen name="margin_large">40dp</dimen>
+    <dimen name="margin_normal">30dp</dimen>
+    <dimen name="margin_small">20dp</dimen>
+    <dimen name="margin_min">15dp</dimen>
+    <dimen name="margin_tiny">10dp</dimen>
+    <!-- 通用 内边距（padding） -->
+    <dimen name="padding_super">30dp</dimen>
+    <dimen name="padding_max">25dp</dimen>
+    <dimen name="padding_huge">20dp</dimen>
+    <dimen name="padding_large">15dp</dimen>
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_min">4dp</dimen>
+    <dimen name="padding_tiny">2dp</dimen>
+    <!-- 通用 icon -->
+    <dimen name="icon_super">37dp</dimen>
+    <dimen name="icon_max">33dp</dimen>
+    <dimen name="icon_huge">27dp</dimen>
+    <dimen name="icon_large">24dp</dimen>
+    <dimen name="icon_normal">22dp</dimen>
+    <dimen name="icon_small">20dp</dimen>
+    <dimen name="icon_min">18dp</dimen>
+    <dimen name="icon_tiny">15dp</dimen>
+    <dimen name="icon_minimum">12dp</dimen>
+    <!-- 通用 img -->
+    <dimen name="img_super">105dp</dimen>
+    <dimen name="img_max">90dp</dimen>
+    <dimen name="img_huge">75dp</dimen>
+    <dimen name="img_large">62dp</dimen>
+    <dimen name="img_normal">45dp</dimen>
+    <dimen name="img_small">42dp</dimen>
+    <dimen name="img_min">32dp</dimen>
+    <dimen name="img_tiny">30dp</dimen>
+    <dimen name="img_minimum">25dp</dimen>
+    <!-- 列表的高 -->
+    <dimen name="row_h_normal">54dp</dimen>
+
+    <!-- 标题栏.高度 -->
+    <dimen name="title_view_height">48dp</dimen>
+
+    <!-- 下拉加载 -->
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+</resources>

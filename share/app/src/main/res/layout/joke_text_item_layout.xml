@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.qin.tao.share.app.base.BaseTextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_min"
+                android:textColor="@color/black"
+                android:maxLength="10"
+                android:textSize="@dimen/font_small"
+                tools:text="1111" />
+
+            <com.qin.tao.share.app.base.BaseTextView
+                android:id="@+id/tv_copy"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_min"
+                android:layout_marginRight="@dimen/margin_min"
+                android:background="@drawable/btn_corner_bg"
+                android:gravity="center"
+                android:text="@string/string_copy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+        </RelativeLayout>
+
+        <com.qin.tao.share.app.base.BaseTextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_min"
+            android:layout_marginRight="@dimen/margin_min"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/yc_black_50"
+            android:textSize="@dimen/font_small"
+            tools:text="111121212121212121222222222222222222222222222222222222222222222" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/margin_min"
+            android:layout_marginRight="@dimen/margin_min"
+            android:layout_marginTop="5dp"
+            android:background="@color/deepgray" />
+    </LinearLayout>
+</LinearLayout>

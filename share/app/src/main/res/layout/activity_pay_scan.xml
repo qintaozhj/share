@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.qin.tao.share.widget.title.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/tvDex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/color_f9e7c7"
+        android:padding="10dp"
+        android:textColor="@color/yc_black_75"
+        android:textSize="@dimen/font_small" />
+
+    <ImageView
+        android:id="@+id/pay_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

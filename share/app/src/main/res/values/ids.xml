@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用标题栏 -->
+    <item name="titleView_item_left" type="id"/>
+    <item name="titleView_item_right" type="id"/>
+    <item name="titleView_item_right_txt" type="id"/>
+    <item name="titleView_item_right_icon" type="id"/>
+    <item name="titleView_item_option" type="id"/>
+    <item name="titleView_item_option_popup_sharp" type="id"/>
+    <item name="titleView_item_title" type="id"/>
+    <!-- 搜索栏.（页面内） -->
+    <item name="search_cion_id" type="id"/>
+
+    <!-- 上拉加载 -->
+
+    <item name="gridview" type="id"/>
+    <item name="webview" type="id"/>
+    <item name="scrollview" type="id"/>
+
+    <!-- View TAG,不够再加 -->
+    <item name="tag_0" type="id"/>
+    <item name="tag_1" type="id"/>
+    <item name="tag_group_position" type="id"/>
+    <item name="tag_child_position" type="id"/>
+
+    <!-- Messages IDs -->
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_book_contents_failed" type="id"/>
+    <item name="search_book_contents_succeeded" type="id"/>
+
+    <!-- 2.5 新添加 -->
+    <item name="border_of_custom_title_view" type="id"/>
+    <item name="left_item_container_of_custom_title_view" type="id"/>
+    <item name="right_item_container_of_custom_title_view" type="id"/>
+    <item name="menu_drawer_of_custom_title_view" type="id"/>
+    <item name="returnback_of_custom_title_view" type="id"/>
+    <item name="custom_left_text_of_custom_title_view" type="id"/>
+    <item name="custom_left_image_of_custom_title_view" type="id"/>
+    <item name="custom_right_text_of_custom_title_view" type="id"/>
+    <item name="custom_right_image_of_custom_title_view" type="id"/>
+    <item name="right_container_of_song_info_view" type="id"/>
+    <item name="right_top_container_of_song_info_view" type="id"/>
+    <item name="song_of_song_info_view" type="id"/>
+    <item name="singer_of_song_info_view" type="id"/>
+    <item name="state_text_view_of_song_info_view" type="id"/>
+    <item name="state_of_song_info_view" type="id"/>
+    <item name="total_of_song_info_view" type="id"/>
+
+    <!-- V2.1 新添加 -->
+    <item name="slidingmenu_selected_view" type="id"/>
+    <item name="ranking_list_item_tag_entity" type="id"/>
+    <item name="main_right_menu_inner_image_view" type="id"/>
+    <item name="main_right_menu_inner_text_view" type="id"/>
+    <item name="tag_key_of_show_original_image" type="id"/>
+    <item name="expression_container" type="id"/>
+    <item name="expression_tab" type="id"/>
+    <item name="action_submit" type="id"/>
+
+    <!--
+    <item type="id" name="gridview" />
+    <item type="id" name="webview" />
+    <item type="id" name="scrollview" />
+    -->
+    <item name="image_loader_uri" type="id" />
+
+    <!-- 已点歌曲 -->
+    <item name="rl_selected_song_position" type="id" />
+    <item name="rl_selected_song_info" type="id" />
+
+</resources>

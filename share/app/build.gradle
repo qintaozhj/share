@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile  name: 'autoupdatesdk-release', ext: 'aar'
+    compile name: 'YoumiSdk_v7.3.0_2017-06-02', ext: 'aar'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.facebook.fresco:fresco:0.9.0'
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    //更改生成的apk名字
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            output.outputFile = new File(file.parent, "share-" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk")
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.qin.tao.share"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 11
+        versionName "1.1"
+        multiDexEnabled true
+        //配置.统计
+        buildConfigField "String", "MTA", "\"AB3K87XE2PYL\""
+        jackOptions {
+            enabled false
+        }
+    }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+
+    //以下为签名打包
+    signingConfigs {
+
+        release {
+            storeFile file("share.jks")
+            storePassword "share123456"
+            keyAlias "share123456"
+            keyPassword "share123456"
+        }
+
+    }
+    //打包apk配置
+    buildTypes {
+        debug {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            debuggable true
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            debuggable false
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            //配置.统计
+            buildConfigField "String", "MTA", "\"AB3K87XE2PYL\""
+        }
+    }
+
+}
+
+

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">有趣分享</string>
+    <string name="data_error">数据异常</string>
+    <string name="photo_detail_indicator">%1$d/%2$d</string>
+
+    <string name="alipay">支付宝</string>
+    <string name="alipay_rapid">支付宝快捷入口</string>
+    <string name="alipay_scan">支付宝扫码入口</string>
+    <string name="wechat">微信扫码入口</string>
+    <string name="store_select_pay">选择打赏方式</string>
+    <string name="string_money">元</string>
+    <string name="string_copy">复制</string>
+    <string name="send_red_packet_amount_unit">元</string>
+    <string name="modify_amount">修改金额</string>
+    <string name="to_pay">塞钱</string>
+    <string name="input_amount_hint">请输入金额</string>
+    <string name="string_welfare">福利</string>
+    <string name="string_about_me">关于我</string>
+    <string name="string_recommend">推荐</string>
+    <string name="string_joke_img">趣图</string>
+    <string name="string_joke_text">趣事</string>
+    <string name="string_reward">赏一下</string>
+
+
+    <string name="error_network_failed">您的网络不太给力哦</string>
+    <string name="error_network_retry">点击屏幕重试</string>
+    <string name="string_top_line">头条</string>
+    <string name="string_wechat">精选</string>
+</resources>
