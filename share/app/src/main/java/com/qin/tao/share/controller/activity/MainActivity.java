@@ -37,6 +37,9 @@ import ddd.eee.fff.nm.vdo.VideoAdListener;
 import ddd.eee.fff.nm.vdo.VideoAdManager;
 import ddd.eee.fff.nm.vdo.VideoAdSettings;
 
+/**
+ * 主activity
+ */
 public class MainActivity extends BaseActivity {
 
     private String url;
