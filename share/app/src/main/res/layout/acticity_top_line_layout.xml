@@ -4,11 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.qin.tao.share.widget.title.TitleView
-        android:id="@+id/titleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <com.qin.tao.share.app.base.BaseListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -19,5 +14,15 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="5dp"
         android:listSelector="@android:color/transparent"
-        android:scrollbars="none" />
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/emptyData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/yc_50b"
+        android:textSize="@dimen/font_normal" />
 </LinearLayout>

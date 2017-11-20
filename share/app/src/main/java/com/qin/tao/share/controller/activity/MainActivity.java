@@ -3,27 +3,21 @@ package com.qin.tao.share.controller.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
-import android.view.View;
 import android.webkit.URLUtil;
 
 import com.baidu.autoupdatesdk.BDAutoUpdateSDK;
 import com.baidu.autoupdatesdk.UICheckUpdateCallback;
 import com.qin.tao.share.R;
 import com.qin.tao.share.app.base.BaseActivity;
-import com.qin.tao.share.app.base.OnBaseClickListener;
 import com.qin.tao.share.app.intent.IntentKey;
 import com.qin.tao.share.app.log.Logger;
-import com.qin.tao.share.app.utils.ToastUtils;
 import com.qin.tao.share.controller.activity.ad.LocalADManager;
-import com.qin.tao.share.controller.activity.gank.WelFareActivity;
-import com.qin.tao.share.controller.activity.juhe.JokeImageActivity;
-import com.qin.tao.share.controller.activity.juhe.JokeTextActivity;
-import com.qin.tao.share.controller.activity.juhe.JokeTopLineActivity;
-import com.qin.tao.share.controller.activity.juhe.JokeWeChatActivity;
-import com.qin.tao.share.controller.activity.more.AboutMeActivity;
-import com.qin.tao.share.controller.activity.pay.ShopPayActivity;
 import com.qin.tao.share.controller.activity.web.WebViewActivity;
+import com.qin.tao.share.controller.fragment.HomeFragment;
+import com.qin.tao.share.controller.fragment.UserFragment;
+import com.qin.tao.share.widget.tabview.TabSwitcher;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;
@@ -31,11 +25,8 @@ import com.tencent.android.tpush.service.XGPushServiceV3;
 
 import java.util.UUID;
 
-import ddd.eee.fff.nm.cm.ErrorCode;
 import ddd.eee.fff.nm.sp.SpotManager;
-import ddd.eee.fff.nm.vdo.VideoAdListener;
 import ddd.eee.fff.nm.vdo.VideoAdManager;
-import ddd.eee.fff.nm.vdo.VideoAdSettings;
 
 /**
  * 主activity
@@ -44,7 +35,9 @@ public class MainActivity extends BaseActivity {
 
     private String url;
     private String title;
-    private View rl_recommend, adLine;
+    private TabSwitcher tabSwitcher;
+    private HomeFragment homeFragment;
+    private UserFragment userFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,12 +78,6 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void toWebView() {
-        Intent intent = new Intent(this, WebViewActivity.class);
-        intent.putExtra(IntentKey.KEY_URL, url);
-        intent.putExtra(IntentKey.KEY_TITLE, title);
-        startActivity(intent);
-    }
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -110,8 +97,6 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initData() {
         if (LocalADManager.isShowAd) {
-            rl_recommend.setVisibility(View.VISIBLE);
-            adLine.setVisibility(View.VISIBLE);
             preloadData();
         }
         //百度更新检查
@@ -120,54 +105,36 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initViews() {
-        setContentView(R.layout.activity_main);
-        findViewById(R.id.welfare).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.tv_joke_text).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.tv_joke_mig).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.reward).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.topLine).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.wechat).setOnClickListener(onBaseClickListener);
-        findViewById(R.id.rl_about_me).setOnClickListener(onBaseClickListener);
-        rl_recommend = findViewById(R.id.rl_recommend);
-        adLine = findViewById(R.id.adLine);
-        rl_recommend.setOnClickListener(onBaseClickListener);
-        rl_recommend.setVisibility(View.GONE);
-        adLine.setVisibility(View.GONE);
+        setContentView(R.layout.activity_main_layout);
+
+        tabSwitcher = (TabSwitcher) findViewById(R.id.tabSwitcher);
+        tabSwitcher.addTab("首页", getResources().getDrawable(R.drawable.home_default),
+                getResources().getDrawable(R.drawable.home_select));
+        tabSwitcher.addTab("我的", getResources().getDrawable(R.drawable.me_default),
+                getResources().getDrawable(R.drawable.me_select));
+        tabSwitcher.setOnTabChangedListener(new TabSwitcher.OnTabChangedListener() {
+            @Override
+            public void onTabChanged(int last, int current) {
+                showFragment(current);
+            }
+        });
+        showFragment(0);
     }
 
-    private OnBaseClickListener onBaseClickListener = new OnBaseClickListener() {
-        @Override
-        public void onBaseClick(View v) {
-            switch (v.getId()) {
-                case R.id.welfare:
-                    startActivity(new Intent(MainActivity.this, WelFareActivity.class));
-                    break;
-                case R.id.reward:
-                    startActivity(new Intent(MainActivity.this, ShopPayActivity.class));
-                    break;
-                case R.id.topLine:
-                    startActivity(new Intent(MainActivity.this, JokeTopLineActivity.class));
-                    break;
-                case R.id.wechat:
-                    startActivity(new Intent(MainActivity.this, JokeWeChatActivity.class));
-                    break;
-                case R.id.tv_joke_text:
-                    startActivity(new Intent(MainActivity.this, JokeTextActivity.class));
-                    break;
-                case R.id.tv_joke_mig:
-                    startActivity(new Intent(MainActivity.this, JokeImageActivity.class));
-                    break;
-                case R.id.rl_about_me:
-                    startActivity(new Intent(MainActivity.this, AboutMeActivity.class));
-                    break;
-                case R.id.rl_recommend:
-                    setupVideoAd();
-                    break;
-            }
 
+    private void showFragment(int index) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        if (index == 0) {
+            if (homeFragment == null)
+                homeFragment = new HomeFragment();
+            transaction.replace(R.id.ll_container, homeFragment);
+        } else {
+            if (userFragment == null)
+                userFragment = new UserFragment();
+            transaction.replace(R.id.ll_container, userFragment);
         }
-    };
-
+        transaction.commitAllowingStateLoss();
+    }
 
     /**
      * 预加载数据
@@ -178,51 +145,11 @@ public class MainActivity extends BaseActivity {
         VideoAdManager.getInstance(this).requestVideoAd(this);
     }
 
-    private void setupVideoAd() {
-        final VideoAdSettings videoAdSettings = new VideoAdSettings();
-        videoAdSettings.setInterruptTips("视频还没有播放完成" + "\n确定要退出吗？");
-        VideoAdManager.getInstance(this)
-                .showVideoAd(this, videoAdSettings, new VideoAdListener() {
-                    @Override
-                    public void onPlayStarted() {
-                        Logger.d("开始播放视频");
-                    }
-
-                    @Override
-                    public void onPlayInterrupted() {
-                        ToastUtils.showText(MainActivity.this, "播放视频被中断");
-                    }
-
-                    @Override
-                    public void onPlayFailed(int errorCode) {
-                        Logger.d("视频播放失败");
-                        switch (errorCode) {
-                            case ErrorCode.NON_NETWORK:
-                                ToastUtils.showText(MainActivity.this, "网络异常");
-                                break;
-                            case ErrorCode.NON_AD:
-                                ToastUtils.showText(MainActivity.this, "视频暂无内容");
-                                break;
-                            case ErrorCode.RESOURCE_NOT_READY:
-                                ToastUtils.showText(MainActivity.this, "视频资源还没准备好");
-                                break;
-                            case ErrorCode.SHOW_INTERVAL_LIMITED:
-                                ToastUtils.showText(MainActivity.this, "视频展示间隔限制");
-                                break;
-                            case ErrorCode.WIDGET_NOT_IN_VISIBILITY_STATE:
-                                ToastUtils.showText(MainActivity.this, "视频控件处在不可见状态");
-                                break;
-                            default:
-                                ToastUtils.showText(MainActivity.this, "请稍后再试");
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onPlayCompleted() {
-                        ToastUtils.showText(MainActivity.this, "视频播放成功");
-                    }
-                });
+    private void toWebView() {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        intent.putExtra(IntentKey.KEY_URL, url);
+        intent.putExtra(IntentKey.KEY_TITLE, title);
+        startActivity(intent);
     }
 
 
@@ -243,7 +170,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        SpotManager.getInstance(this).onAppExit();
         VideoAdManager.getInstance(this).onAppExit();
+        SpotManager.getInstance(this).onAppExit();
     }
 }

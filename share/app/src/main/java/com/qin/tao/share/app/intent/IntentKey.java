@@ -25,4 +25,6 @@ public class IntentKey
 
 	public static final String KEY_FROM = "key_from";
 
+	public static final String NEWS_TYPE = "news_type";
+
 }

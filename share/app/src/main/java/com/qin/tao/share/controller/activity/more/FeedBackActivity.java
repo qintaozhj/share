@@ -1,6 +1,5 @@
 package com.qin.tao.share.controller.activity.more;
 
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;

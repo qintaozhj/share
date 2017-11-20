@@ -1,13 +1,10 @@
 package com.qin.tao.share.widget.title;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.qin.tao.share.R;
@@ -49,18 +46,18 @@ public class TitleView extends RelativeLayout {
     private void initView(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.view_title, this, true);
-        View view_status_bar = view.findViewById(R.id.view_status_bar);
+        //View view_status_bar = view.findViewById(R.id.view_status_bar);
         tv_right = (BaseTextView) view.findViewById(R.id.tv_right);
         backLayout = (RelativeLayout) view.findViewById(R.id.backLayout);
         img_back = (ImageView) view.findViewById(R.id.img_back);
         tv_title = (BaseTextView) view.findViewById(R.id.tv_title);
         backLayout.setOnClickListener(mOnBaseClickListener);
         tv_right.setOnClickListener(mOnBaseClickListener);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            view_status_bar.setVisibility(VISIBLE);
-            int statusBarHeight = getStatusBarHeight(context);
-            view_status_bar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight));
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            view_status_bar.setVisibility(VISIBLE);
+//            int statusBarHeight = getStatusBarHeight(context);
+//            view_status_bar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight));
+//        }
     }
 
     /**

@@ -100,10 +100,10 @@ public class JuHeData {
         httpRequestTask.execute(HttpServerManager.serverIpJuHe);
     }
 
-    public void requestTopLine(final DataCallBack<List<TopLineInfo>> callBack) {
+    public void requestTopLine(String type, final DataCallBack<List<TopLineInfo>> callBack) {
         HashMap<String, String> param = new HashMap<>();
         param.put("key", "af6856dc88b9af367d1eb46707da4c4e");
-        param.put("type", "top");
+        param.put("type", type);
         HttpRequestTask httpRequestTask = new HttpRequestBuilder(context).interfaceName(ApiConfig.JUHE_TOP_LINE).param(param).httpMethod(Request.Method.GET)
                 .httpRequestLoadingEnum(HttpRequestLoadingEnum.HTTP_LOADING_DEFAULT)
                 .httpRequestStartListener(new HttpRequestBuilder.IHttpRequestListener() {
@@ -122,6 +122,8 @@ public class JuHeData {
                                     }
                                 }
                                 callBack.onSuccess(list);
+                            } else {
+                                callBack.onFail("");
                             }
                         }
                     }

@@ -6,7 +6,6 @@ import android.content.Intent;
 
 /**
  * 广播接收器.
- * @author xjunjie@gmail.com  2015-3-10 上午10:59:18 *
  */
 public class BaseReceiver extends BroadcastReceiver
 {

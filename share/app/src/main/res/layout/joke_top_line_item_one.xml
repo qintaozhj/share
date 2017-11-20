@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/yc_black_90"
+        android:textSize="@dimen/font_small"
+        tools:text="标题" />
+
+    <ImageView
+        android:id="@+id/img_joke_one"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:scaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <com.qin.tao.share.app.base.BaseTextView
+            android:id="@+id/tv_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/yc_50b"
+            android:textSize="@dimen/font_min"
+            tools:text="腾讯" />
+
+        <com.qin.tao.share.app.base.BaseTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_tiny"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/yc_50b"
+            android:textSize="@dimen/font_min"
+            tools:text="" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/SpaceLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>

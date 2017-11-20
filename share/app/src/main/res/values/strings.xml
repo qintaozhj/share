@@ -26,4 +26,46 @@
     <string name="error_network_retry">点击屏幕重试</string>
     <string name="string_top_line">头条</string>
     <string name="string_wechat">精选</string>
+    <string name="home_square">首页</string>
+    <string name="home_userprofile">我的</string>
+
+    <string name="string_empty_data">暂无数据，请稍后在来看吧</string>
+
+
+    <!--时间格式化-->
+    <string name="time_format_second">ss</string>
+    <string name="time_format_minute">mm</string>
+    <string name="time_format_minute_second">mm:ss</string>
+    <string name="time_format_hour_24">HH</string>
+    <string name="time_format_hour_24_minute">HH:mm</string>
+    <string name="time_format_hour_24_minute_second">HH:mm:ss</string>
+    <string name="time_format_hour_12">hh</string>
+    <string name="time_format_day">dd</string>
+    <string name="time_format_month">MM</string>
+    <string name="time_format_month_day">MM-dd</string>
+    <string name="time_format_year">yyyy</string>
+    <string name="time_format_year_month">yyyy-MM</string>
+    <string name="time_format_year_month_day">yyyy-MM-dd</string>
+    <string name="time_format_year_month_day_24_detail">yyyy-MM-dd HH:mm:ss</string>
+    <string name="time_format_year_month_day_24_short">yyyy-MM-dd HH:mm</string>
+    <string name="time_format_year_month_day_24_short_slashes">yyyy/MM/dd HH:mm</string>
+    <string name="time_format_month_day_24_short_slashes">MM/dd HH:mm</string>
+    <string name="time_format_year_month_day_slashes">yyyy/MM/dd</string>
+    <string name="time_format_month_day_slashes">MM/dd</string>
+    <string name="time_format_month_year_slashes">yyyy/MM</string>
+    <string name="time_format_year_month_day_point">yyyy.MM.dd</string>
+    <string name="time_format_month_day_cn">MM月dd日</string>
+    <string name="time_format_day_cn">d日</string>
+    <string name="time_format_month_cn">M月</string>
+    <string name="time_format_year_month_day_24_short_cn">MM月dd日 HH:mm</string>
+    <string name="time_format_year_month_day_24_detail_cn">yyyy年MM月dd日HH时mm分ss秒</string>
+    <string name="time_format_year_month_day_cn">yyyy年MM月dd号</string>
+    <string name="time_format_elapsed_year">%1$d年前</string>
+    <string name="time_format_elapsed_month">%1$d月前</string>
+    <string name="time_format_elapsed_day">%1$d天前</string>
+    <string name="time_format_elapsed_hour">%1$d小时前</string>
+    <string name="time_format_elapsed_minute">%1$d分钟前</string>
+    <string name="time_format_elapsed_just">刚刚</string>
+    <string name="time_format_splice_hour">%1$d小时</string>
+    <string name="time_format_splice_minute">%1$d分钟</string>
 </resources>

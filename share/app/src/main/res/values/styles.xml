@@ -34,6 +34,6 @@
     <style name="SpaceLine">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dip</item>
-        <item name="android:background">@color/yc_20b</item>
+        <item name="android:background">@color/yc_15b</item>
     </style>
 </resources>

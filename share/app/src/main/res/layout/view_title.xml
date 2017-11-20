@@ -3,16 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/yc_main"
+    android:background="@color/blue_10"
     android:gravity="center_vertical"
     android:orientation="vertical">
-
-    <View
-        android:id="@+id/view_status_bar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/transparent"
-        tools:layout_height="25dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"

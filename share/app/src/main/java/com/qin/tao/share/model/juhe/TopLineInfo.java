@@ -1,6 +1,11 @@
 package com.qin.tao.share.model.juhe;
 
+import android.text.TextUtils;
+
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author qintao on 2017/9/12 17:02
@@ -26,7 +31,7 @@ public class TopLineInfo {
     private String category;
     private String author_name;
     private String url;
-    private String thumbnail_pic_s;
+    private List<String> picList = new ArrayList<>();
 
     public TopLineInfo(JSONObject jsonObject) {
         if (jsonObject != null) {
@@ -36,7 +41,15 @@ public class TopLineInfo {
             this.category = jsonObject.optString("category");
             this.author_name = jsonObject.optString("author_name");
             this.url = jsonObject.optString("url");
-            this.thumbnail_pic_s = jsonObject.optString("thumbnail_pic_s");
+            String thumbnail_pic_s = jsonObject.optString("thumbnail_pic_s");
+            String thumbnail_pic_s02 = jsonObject.optString("thumbnail_pic_s02");
+            String thumbnail_pic_s03 = jsonObject.optString("thumbnail_pic_s03");
+            if (!TextUtils.isEmpty(thumbnail_pic_s))
+                picList.add(thumbnail_pic_s);
+            if (!TextUtils.isEmpty(thumbnail_pic_s02))
+                picList.add(thumbnail_pic_s02);
+            if (!TextUtils.isEmpty(thumbnail_pic_s03))
+                picList.add(thumbnail_pic_s03);
         }
     }
 
@@ -88,11 +101,11 @@ public class TopLineInfo {
         this.url = url;
     }
 
-    public String getThumbnail_pic_s() {
-        return thumbnail_pic_s;
+    public List<String> getPicList() {
+        return picList;
     }
 
-    public void setThumbnail_pic_s(String thumbnail_pic_s) {
-        this.thumbnail_pic_s = thumbnail_pic_s;
+    public void setPicList(List<String> picList) {
+        this.picList = picList;
     }
 }

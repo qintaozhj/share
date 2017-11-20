@@ -32,7 +32,7 @@ import ddd.eee.fff.onlineconfig.OnlineConfigCallBack;
 public class WelcomeActivity extends BaseActivity {
 
     private PermissionHelper mPermissionHelper;
-    private static final String MY_KEY = "isOpenYouMiAD";
+    private static final String MY_KEY = "isOpenAD";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,8 @@ public class WelcomeActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        getYouMiOnLineParam();
+        getOnLineParam();
+        //runApp();
     }
 
     @Override
@@ -121,7 +122,7 @@ public class WelcomeActivity extends BaseActivity {
     /**
      * 获取在线配置参数
      */
-    private void getYouMiOnLineParam() {
+    private void getOnLineParam() {
         try {
             AdManager.getInstance(this).asyncGetOnlineConfig(MY_KEY, new OnlineConfigCallBack() {
                 @Override

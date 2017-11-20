@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_f7f7f7">
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/tv_tableName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="3dp"
+        android:textColor="@color/yc_70b"
+        android:textSize="@dimen/font_min"
+        android:textStyle="bold" />
+
+    <com.qin.tao.share.app.base.BaseTextView
+        android:id="@+id/tv_num"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="99"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <View
+        style="@style/SpaceLine"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

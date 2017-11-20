@@ -3,8 +3,6 @@ package com.qin.tao.share.controller.activity.web;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -21,18 +19,13 @@ import android.widget.ProgressBar;
 import com.qin.tao.share.R;
 import com.qin.tao.share.app.base.BaseActivity;
 import com.qin.tao.share.app.base.OnBaseClickListener;
-import com.qin.tao.share.app.config.FinalConfig;
 import com.qin.tao.share.app.intent.IntentKey;
 import com.qin.tao.share.app.log.Logger;
 import com.qin.tao.share.app.utils.ToastUtils;
-import com.qin.tao.share.controller.activity.ad.LocalADManager;
 import com.qin.tao.share.widget.title.TitleView;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import ddd.eee.fff.nm.sp.SpotListener;
 import ddd.eee.fff.nm.sp.SpotManager;
+
 
 /**
  * Created by Administrator on 2017/9/24.
@@ -46,8 +39,6 @@ public class WebViewActivity extends BaseActivity {
     private ProgressBar mProgressBar;
     private String mUrl = null;
     private String mTitleOfWebPage = null;
-    private Timer timer;
-    private TimerTask timerTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,39 +155,7 @@ public class WebViewActivity extends BaseActivity {
             }
         });
         loadDefaultUrl();
-    }
-
-
-    private void initTask() {
-        if (null == timer)
-            timer = new Timer();
-        if (null == timerTask)
-            timerTask = new TimerTask() {
-                @Override
-                public void run() {
-                    handler.sendEmptyMessage(0);
-                }
-            };
-        timer.schedule(timerTask, FinalConfig.TIME_DELAY, FinalConfig.TIME_LOOP);
-    }
-
-    Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            setupSpotAd();
-        }
-    };
-
-    private void cancelTask() {
-        if (timer != null) {
-            timer.cancel();
-            timer = null;
-        }
-        if (timerTask != null) {
-            timerTask.cancel();
-            timerTask = null;
-        }
+        initAdData();
     }
 
 
@@ -232,42 +191,10 @@ public class WebViewActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    /**
-     *
-     */
-    private void setupSpotAd() {
-        SpotManager.getInstance(this).setImageType(SpotManager.IMAGE_TYPE_VERTICAL);
-        SpotManager.getInstance(this)
-                .setAnimationType(SpotManager.ANIMATION_TYPE_ADVANCED);
-        SpotManager.getInstance(this).showSpot(this, new SpotListener() {
-
-            @Override
-            public void onShowSuccess() {
-            }
-
-            @Override
-            public void onShowFailed(int errorCode) {
-
-            }
-
-            @Override
-            public void onSpotClosed() {
-            }
-
-            @Override
-            public void onSpotClicked(boolean isWebPage) {
-
-            }
-        });
-    }
-
 
     @Override
     public void onResume() {
         super.onResume();
-        if (LocalADManager.isShowAd)
-            initTask();
-
         try {
             Class.forName("android.webkit.WebView").getMethod("onResume", (Class[]) null).invoke(mWebView, (Object[]) null);
         } catch (Exception e) {

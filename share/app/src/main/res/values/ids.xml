@@ -77,4 +77,6 @@
     <item name="rl_selected_song_position" type="id" />
     <item name="rl_selected_song_info" type="id" />
 
+    <item name="top_info" type="id" />
+
 </resources>

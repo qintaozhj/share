@@ -18,7 +18,6 @@ import android.util.Log;
  * <li>正常级别权限：开发者仅仅需要在AndroidManifext.xml上声明，那么应用就会被允许拥有该权限，如：android.permission.INTERNET</li>
  * <li>危险级别权限：开发者需要在AndroidManifext.xml上声明，并且在运行时进行申请，而且用户允许了，应用才会被允许拥有该权限，如：android.permission.WRITE_EXTERNAL_STORAGE</li>
  * </ul>
- * 有米的以下权限需要在Android6.0上被允许，有米广告sdk才能正常工作，开发者需要在调用有米的任何代码之前，提前让用户允许权限
  * <ul>
  * <li>必须申请的权限
  * <ul>
@@ -50,7 +49,7 @@ public class PermissionHelper {
 	private final static int REQUEST_OPEN_APPLICATION_SETTINGS_CODE = 12345;
 	
 	/**
-	 * 有米 Android SDK 所需要向用户申请的权限列表
+	 *  Android SDK 所需要向用户申请的权限列表
 	 */
 	private PermissionModel[] mPermissionModels = new PermissionModel[] {
 			new PermissionModel("获取手机信息", Manifest.permission.READ_PHONE_STATE, "我们需要获取手机信息权限，以便来标识您的身份", READ_PHONE_STATE_CODE),

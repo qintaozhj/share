@@ -38,8 +38,10 @@
     <color name="yc_black_10">#19000000</color>
     <!-- 10% 透明蓝色-->
     <color name="yc_80b">#333333</color>
+    <color name="yc_70b">#FF626364</color>
     <color name="yc_50b">#808080</color>
     <color name="yc_20b">#cccccc</color>
+    <color name="yc_15b">#FFE2E2E2</color>
     <color name="yc_10b">#e6e6e6</color>
     <color name="yc_0b">#f2f2f2</color>
     <!-- 基础色  -->
@@ -93,5 +95,6 @@
     <color name="danmu_bg_color">#ffffff</color>
     <color name="danmu_content_color">#333333</color>
     <color name="color_f9e7c7">#f9e7c7</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
 
 </resources>
