@@ -6,7 +6,6 @@ import android.os.PowerManager.WakeLock;
 
 /**
  * 锁屏管理
- * @author lixiaoli
  *
  */
 public class WakeLockUtil

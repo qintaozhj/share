@@ -7,8 +7,6 @@ import java.util.List;
 
 /**
  * Log工具类
- *
- * @author xp
  */
 public class Logger {
     public static final String TAG = "Logger";

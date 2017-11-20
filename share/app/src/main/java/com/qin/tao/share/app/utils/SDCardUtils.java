@@ -28,7 +28,6 @@ import java.util.concurrent.Executors;
 /**
  * SD 卡 相关
  *
- * @author xiongjunjie
  */
 public class SDCardUtils {
 

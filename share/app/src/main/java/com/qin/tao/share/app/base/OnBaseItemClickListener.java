@@ -10,10 +10,6 @@ import java.util.WeakHashMap;
 
 /**
  * 
- * @author lxl
- *		2015-1-19-上午11:30:31
- *		
- *		
  *
  */
 public abstract class OnBaseItemClickListener implements OnItemClickListener

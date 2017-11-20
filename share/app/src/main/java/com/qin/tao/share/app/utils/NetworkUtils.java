@@ -13,13 +13,8 @@ import com.qin.tao.share.app.base.BaseApplication;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author lxl
- *         2014-12-23-下午12:03:18
- *         <p/>
  *         网络信息配置:
  *         网络环境检测(wifi,2G/3G/4G,网络状态检查)
- * @author xjunjie@gmail.com  2015-1-19 下午3:04:38
- *         取消对公共变量的直接读写.添加 get 和 set 入口.以便支持异步锁 synchronized
  */
 public class NetworkUtils {
     /*

@@ -7,7 +7,6 @@ import android.widget.ScrollView;
 /**
  * ScrollView 基类.方便统一维护
  * <br/>setOverScrollMode 为 Never
- * @author xjunjie@gmail.com  2015-12-28 下午5:46:55
  */
 public class BaseScrollView extends ScrollView
 {

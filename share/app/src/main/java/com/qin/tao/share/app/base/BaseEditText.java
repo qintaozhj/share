@@ -5,12 +5,7 @@ import android.util.AttributeSet;
 import android.widget.EditText;
 
 /**
- * 
- * @author lxl
- *		2015-1-8-上午11:47:30
- *		
- *		BaseEditText	:
- *											封装EditText(根据UI规范对Edittext进行通用管理)
+ *封装EditText(根据UI规范对Edittext进行通用管理)
  */
 public class BaseEditText extends EditText
 {

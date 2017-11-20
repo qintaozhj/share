@@ -23,8 +23,7 @@ import okhttp3.OkHttpClient;
 
 
 /**
- * Date: 2016年5月10日
- * Time: 下午4:15:33
+ * Date: 2017年5月10日
  * Des:程序初始化相关
  */
 public class BaseApplication extends Application {

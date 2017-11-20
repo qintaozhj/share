@@ -10,8 +10,6 @@ import android.view.View;
 
 /**
  * Fragment 基类
- *
- * @author JIE-XINGBO
  */
 public class BaseFragment extends Fragment {
 

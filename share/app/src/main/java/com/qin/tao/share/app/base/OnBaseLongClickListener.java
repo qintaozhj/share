@@ -4,20 +4,15 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 
 /**
- * 
- * @author jiangshun
- *		
  *
  */
-public abstract class OnBaseLongClickListener implements OnLongClickListener
-{
+public abstract class OnBaseLongClickListener implements OnLongClickListener {
 
-	public abstract boolean onBaseLongClick(View v);
+    public abstract boolean onBaseLongClick(View v);
 
-	@Override
-	public boolean onLongClick(View clickedView)
-	{
-		return onBaseLongClick(clickedView);
-	}
+    @Override
+    public boolean onLongClick(View clickedView) {
+        return onBaseLongClick(clickedView);
+    }
 
 }
