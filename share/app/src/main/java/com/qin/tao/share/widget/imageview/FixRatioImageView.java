@@ -1,5 +1,6 @@
 package com.qin.tao.share.widget.imageview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -10,6 +11,7 @@ import com.qin.tao.share.R;
 /**
  * Fix ratio imageView, ratio = width/height, default = 1;
  */
+@SuppressLint("AppCompatCustomView")
 public class FixRatioImageView extends ImageView {
     float ratio = 1.0f;
 

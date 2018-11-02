@@ -19,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MessageReceiver extends XGPushBaseReceiver {
-    public static final String LogTag = "TPushReceiver";
+    public static final String LogTag = "XINGE";
 
     /**
      * 展示通知信息，通知到达app，会调用此方法,目测没什么用

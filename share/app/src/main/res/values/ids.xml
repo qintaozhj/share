@@ -78,5 +78,6 @@
     <item name="rl_selected_song_info" type="id" />
 
     <item name="top_info" type="id" />
+    <item name="cache_info" type="id" />
 
 </resources>

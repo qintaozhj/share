@@ -1,10 +1,12 @@
 package com.qin.tao.share.app.base;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
 
+@SuppressLint("AppCompatCustomView")
 public class BaseTextView extends TextView
 {
 

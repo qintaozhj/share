@@ -10,6 +10,7 @@ public class JokeInfo {
     private String content;
     private String time;
     private String url;
+    private boolean isCollection = false;
 
     public JokeInfo(JSONObject jsonObject) {
         if (jsonObject != null) {
@@ -42,5 +43,13 @@ public class JokeInfo {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public boolean isCollection() {
+        return isCollection;
+    }
+
+    public void setCollection(boolean collection) {
+        isCollection = collection;
     }
 }

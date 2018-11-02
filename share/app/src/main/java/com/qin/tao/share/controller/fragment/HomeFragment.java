@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 import com.astuetz.PagerSlidingTabStrip;
 import com.qin.tao.share.R;
 import com.qin.tao.share.app.base.BaseFragment;
+import com.qin.tao.share.app.log.Logger;
 import com.qin.tao.share.controller.adapter.SharePagerAdapter;
+import com.tencent.android.tpush.XGIOperateCallback;
+import com.tencent.android.tpush.XGPushConfig;
+import com.tencent.android.tpush.XGPushManager;
 
 /**
  * @author qintao on 2017/11/9 15:19
@@ -59,6 +63,7 @@ public class HomeFragment extends BaseFragment {
 
             }
         });
+
     }
 
 

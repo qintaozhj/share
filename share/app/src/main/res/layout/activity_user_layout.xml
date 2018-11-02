@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
 
     <com.qin.tao.share.app.base.BaseTextView
@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="你感兴趣的东西，可能在这里哦"
         android:textColor="@color/white"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/img_welfare" />
+                    android:src="@drawable/img_welfare"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
                     android:layout_toRightOf="@+id/img_welfare"
                     android:text="@string/string_welfare"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/welfare_arrow"
@@ -62,14 +62,14 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
             <View
                 style="@style/SpaceLine"
                 android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="@dimen/margin_small" />
+                android:layout_marginRight="@dimen/margin_small"/>
 
             <RelativeLayout
                 android:id="@+id/rl_joke_text"
@@ -86,7 +86,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/img_joke_text" />
+                    android:src="@drawable/img_joke_text"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
                     android:layout_toRightOf="@+id/img_joke_text"
                     android:text="@string/string_joke_text"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/joke_text_arrow"
@@ -107,14 +107,14 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
             <View
                 style="@style/SpaceLine"
                 android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="@dimen/margin_small" />
+                android:layout_marginRight="@dimen/margin_small"/>
 
             <RelativeLayout
                 android:id="@+id/rl_joke_img"
@@ -131,7 +131,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/img_joke_img" />
+                    android:src="@drawable/img_joke_img"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                     android:layout_toRightOf="@+id/img_joke_img"
                     android:text="@string/string_joke_img"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/joke_img_arrow"
@@ -152,14 +152,14 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="@color/app_color_bg" />
+                android:background="@color/app_color_bg"/>
 
             <RelativeLayout
                 android:id="@+id/rl_weChat"
@@ -176,7 +176,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/img_jingxuan" />
+                    android:src="@drawable/img_jingxuan"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
                     android:layout_toRightOf="@+id/img_weChat"
                     android:text="@string/string_wechat"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/weChat_arrow"
@@ -197,14 +197,14 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
             <View
                 style="@style/SpaceLine"
                 android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="@dimen/margin_small" />
+                android:layout_marginRight="@dimen/margin_small"/>
 
             <RelativeLayout
                 android:id="@+id/rl_recommend"
@@ -221,7 +221,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/me_recommend_icon" />
+                    android:src="@drawable/me_recommend_icon"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -231,7 +231,7 @@
                     android:layout_toRightOf="@+id/img_recommend"
                     android:text="@string/string_recommend"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/recommend_arrow"
@@ -242,14 +242,59 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/SpaceLine"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_collection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_h_normal"
+                android:background="@drawable/list_selected_item_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_normal">
+
+                <ImageView
+                    android:id="@+id/img_collection"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/me_recommend_icon"/>
+
+                <com.qin.tao.share.app.base.BaseTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_toRightOf="@+id/img_collection"
+                    android:text="@string/string_collection"
+                    android:textColor="@color/yc_black_75"
+                    android:textSize="@dimen/font_normal"/>
+
+                <ImageView
+                    android:id="@+id/collection_arrow"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_min"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/public_buttom_arrow"
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="@color/app_color_bg" />
+                android:background="@color/app_color_bg"/>
 
             <RelativeLayout
                 android:id="@+id/rl_reward"
@@ -266,7 +311,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/img_reward" />
+                    android:src="@drawable/img_reward"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -276,7 +321,7 @@
                     android:layout_toRightOf="@+id/img_reward"
                     android:text="@string/string_reward"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/reward_arrow"
@@ -287,7 +332,7 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
@@ -296,7 +341,7 @@
                 android:id="@+id/adLine"
                 style="@style/SpaceLine"
                 android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="@dimen/margin_small" />
+                android:layout_marginRight="@dimen/margin_small"/>
 
             <RelativeLayout
                 android:id="@+id/rl_about_me"
@@ -313,7 +358,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/more_about_us" />
+                    android:src="@drawable/more_about_us"/>
 
                 <com.qin.tao.share.app.base.BaseTextView
                     android:layout_width="wrap_content"
@@ -323,7 +368,7 @@
                     android:layout_toRightOf="@+id/img_about_me"
                     android:text="@string/string_about_me"
                     android:textColor="@color/yc_black_75"
-                    android:textSize="@dimen/font_normal" />
+                    android:textSize="@dimen/font_normal"/>
 
                 <ImageView
                     android:id="@+id/about_me_arrow"
@@ -334,11 +379,11 @@
                     android:layout_marginRight="@dimen/margin_min"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/public_buttom_arrow"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
             </RelativeLayout>
 
-            <View style="@style/SpaceLine" />
+            <View style="@style/SpaceLine"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

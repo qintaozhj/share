@@ -17,6 +17,7 @@ import com.qin.tao.share.app.base.OnBaseClickListener;
 import com.qin.tao.share.app.log.Logger;
 import com.qin.tao.share.app.utils.DipPxConversion;
 import com.qin.tao.share.app.utils.ToastUtils;
+import com.qin.tao.share.controller.activity.CollectionActivity;
 import com.qin.tao.share.controller.activity.ad.LocalADManager;
 import com.qin.tao.share.controller.activity.gank.WelFareActivity;
 import com.qin.tao.share.controller.activity.juhe.JokeImageActivity;
@@ -25,10 +26,10 @@ import com.qin.tao.share.controller.activity.juhe.JokeWeChatActivity;
 import com.qin.tao.share.controller.activity.more.AboutMeActivity;
 import com.qin.tao.share.controller.activity.pay.ShopPayActivity;
 
-import ddd.eee.fff.nm.cm.ErrorCode;
-import ddd.eee.fff.nm.vdo.VideoAdListener;
-import ddd.eee.fff.nm.vdo.VideoAdManager;
-import ddd.eee.fff.nm.vdo.VideoAdSettings;
+//import ddd.eee.fff.nm.cm.ErrorCode;
+//import ddd.eee.fff.nm.vdo.VideoAdListener;
+//import ddd.eee.fff.nm.vdo.VideoAdManager;
+//import ddd.eee.fff.nm.vdo.VideoAdSettings;
 
 /**
  * @author qintao on 2017/11/9 15:19
@@ -63,6 +64,7 @@ public class UserFragment extends BaseFragment {
         mParentView.findViewById(R.id.rl_joke_img).setOnClickListener(onBaseClickListener);
         mParentView.findViewById(R.id.rl_weChat).setOnClickListener(onBaseClickListener);
         mParentView.findViewById(R.id.rl_recommend).setOnClickListener(onBaseClickListener);
+        mParentView.findViewById(R.id.rl_collection).setOnClickListener(onBaseClickListener);
         mParentView.findViewById(R.id.rl_reward).setOnClickListener(onBaseClickListener);
         mParentView.findViewById(R.id.rl_about_me).setOnClickListener(onBaseClickListener);
         tipView = (BaseTextView) mParentView.findViewById(R.id.tipView);
@@ -94,6 +96,9 @@ public class UserFragment extends BaseFragment {
                 case R.id.rl_joke_img:
                     startActivity(new Intent(mActivity, JokeImageActivity.class));
                     break;
+                case R.id.rl_collection:
+                    startActivity(new Intent(mActivity, CollectionActivity.class));
+                    break;
                 case R.id.rl_about_me:
                     startActivity(new Intent(mActivity, AboutMeActivity.class));
                     break;
@@ -115,50 +120,50 @@ public class UserFragment extends BaseFragment {
             ToastUtils.showText(mActivity, "暂无资源，请稍后在看吧");
             return;
         }
-        final VideoAdSettings videoAdSettings = new VideoAdSettings();
-        videoAdSettings.setInterruptTips("视频还没有播放完成" + "\n确定要退出吗？");
-        VideoAdManager.getInstance(mActivity)
-                .showVideoAd(mActivity, videoAdSettings, new VideoAdListener() {
-                    @Override
-                    public void onPlayStarted() {
-                        Logger.d("开始播放视频");
-                    }
-
-                    @Override
-                    public void onPlayInterrupted() {
-                        ToastUtils.showText(mActivity, "播放视频被中断");
-                    }
-
-                    @Override
-                    public void onPlayFailed(int errorCode) {
-                        Logger.d("视频播放失败");
-                        switch (errorCode) {
-                            case ErrorCode.NON_NETWORK:
-                                ToastUtils.showText(mActivity, "网络异常");
-                                break;
-                            case ErrorCode.NON_AD:
-                                ToastUtils.showText(mActivity, "视频暂无内容");
-                                break;
-                            case ErrorCode.RESOURCE_NOT_READY:
-                                ToastUtils.showText(mActivity, "视频资源还没准备好");
-                                break;
-                            case ErrorCode.SHOW_INTERVAL_LIMITED:
-                                ToastUtils.showText(mActivity, "视频展示间隔限制");
-                                break;
-                            case ErrorCode.WIDGET_NOT_IN_VISIBILITY_STATE:
-                                ToastUtils.showText(mActivity, "视频控件处在不可见状态");
-                                break;
-                            default:
-                                ToastUtils.showText(mActivity, "请稍后再试");
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onPlayCompleted() {
-                        ToastUtils.showText(mActivity, "视频播放成功");
-                    }
-                });
+//        final VideoAdSettings videoAdSettings = new VideoAdSettings();
+//        videoAdSettings.setInterruptTips("视频还没有播放完成" + "\n确定要退出吗？");
+//        VideoAdManager.getInstance(mActivity)
+//                .showVideoAd(mActivity, videoAdSettings, new VideoAdListener() {
+//                    @Override
+//                    public void onPlayStarted() {
+//                        Logger.d("开始播放视频");
+//                    }
+//
+//                    @Override
+//                    public void onPlayInterrupted() {
+//                        ToastUtils.showText(mActivity, "播放视频被中断");
+//                    }
+//
+//                    @Override
+//                    public void onPlayFailed(int errorCode) {
+//                        Logger.d("视频播放失败");
+//                        switch (errorCode) {
+//                            case ErrorCode.NON_NETWORK:
+//                                ToastUtils.showText(mActivity, "网络异常");
+//                                break;
+//                            case ErrorCode.NON_AD:
+//                                ToastUtils.showText(mActivity, "视频暂无内容");
+//                                break;
+//                            case ErrorCode.RESOURCE_NOT_READY:
+//                                ToastUtils.showText(mActivity, "视频资源还没准备好");
+//                                break;
+//                            case ErrorCode.SHOW_INTERVAL_LIMITED:
+//                                ToastUtils.showText(mActivity, "视频展示间隔限制");
+//                                break;
+//                            case ErrorCode.WIDGET_NOT_IN_VISIBILITY_STATE:
+//                                ToastUtils.showText(mActivity, "视频控件处在不可见状态");
+//                                break;
+//                            default:
+//                                ToastUtils.showText(mActivity, "请稍后再试");
+//                                break;
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onPlayCompleted() {
+//                        ToastUtils.showText(mActivity, "视频播放成功");
+//                    }
+//                });
     }
 
     /**
